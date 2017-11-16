@@ -32,22 +32,27 @@ finch.setWheelPower(0, 0);
 finch.setLED(0, 0, 0);
 wait(1000);
 
-// Have the Finch repeat the motion of moving back and forth 3 more times
+// Have the Finch change the color of its nose back and forth every second until it detects a strong light
 
 
-// Now make the Finch turn to the right for half a second
+// Have the Finch do the sound and light show that you programmed previously.  It should pause for a second if it detects a strong light and it should stop completely if it detects an obstacle
 
 
-// Now make the Finch turn to the left for half a second
+// Have the Finch flash red and blue for 3 seconds if it detects an obstacle.  Have it disarm itself completely if it detects an strong light.
+while (finch.getLightSensors().right < 100 && finch.getLightSensors().left < 100) {
+    if (finch.getObstacleSensors().right || finch.getObstacleSensors().left) {
+        for (var i = 0; i < 3; i += 1) {
+            finch.setLED(255, 0, 0);
+            wait(500);
+            finch.setLED(0, 0, 255);
+            wait(500);
+        }
+        finch.setLED(0, 0, 0);
+    }
+    wait(3000);
+}
 
-
-// Now make the Finch turn to the right for half a second but make it turn more quickly than before
-
-
-// Now make the Finch turn to the left for half a second but make it turn more quickly than before
-
-
-// Now create a maze with at least two turns and have the Finch follow that path
+// Have the Finch do the maze that you programmed earlier but have it pause if it detects an obstacle and stop completely if it detects a strong light
 
 
 function wait(msecs, buffer) {
