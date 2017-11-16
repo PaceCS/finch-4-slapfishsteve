@@ -43,16 +43,16 @@ while (finch.getLightSensors().right < 100 && finch.getLightSensors().left < 100
         wait(100);
     }
     for (let i = 0; i < 3; i += 1) {
-        finch.setLED(255, 0, 0);
+        finch.setLED();
         wait(500);
-        finch.setLED(0, 0, 255);
+        finch.setLED();
         wait(500);
     }
     finch.setLED(0, 0, 0);
 }
 wait(2000);
 
-// Have the Finch do the sound and light show that you programmed previously.  It should pause for a second if it detects a strong light and it should stop completely if it detects an obstacle
+// Have the Finch do the sound and light show that you programmed previously.  It should pause for a second if it detects an obstacle and it should stop completely if it detects a strong
 
 
 // Have the Finch do the maze that you programmed earlier but have it pause if it detects an obstacle and stop completely if it detects a strong light

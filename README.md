@@ -38,6 +38,6 @@ wait(1000);
 
 4. **Alarm System** - Have the Finch do nothing until it detects an obstacle.  If it detects an obstacle, have it flash red and blue for 3 seconds.  Have the Finch disarm itself (i.e. stop) completely if it detects a strong light.
 
-4. **Sound & Light Show w/ Snooze** - Have the Finch put on the sound & light show you developed previously but have it pause for 1 second if it detects a strong light.  Have it stop completely if it detects an obstacle.
+4. **Sound & Light Show w/ Snooze** - Have the Finch put on the sound & light show you developed previously but have it pause for 1 second if it detects an obstacle.  Have it stop completely if it detects a strong light.
 
 4. **Maze Runner w/ Obstacle Detection** - Create a maze and have the Finch successfully navigate it but have it wait for 1 second if it detects an obstacle and stop completely if it detects a strong light.
