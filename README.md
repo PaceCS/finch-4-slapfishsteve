@@ -34,7 +34,7 @@ while (finch.getLightSensors().right < 100 && finch.getLightSensors().left < 100
 finch.setWheelPower(0, 0);
 wait(1000);
 ```
-2. **Light Swap Forever?** - Have the Finch change the color of its nose back and forth until it detects a strong light.
+3. **Light Swap Forever?** - Have the Finch change the color of its nose back and forth until it detects a strong light.
 
 4. **Alarm System** - Have the Finch do nothing until it detects an obstacle.  If it detects an obstacle, have it flash red and blue for 3 seconds.  Have the Finch disarm itself (i.e. stop) completely if it detects a strong light.
 
