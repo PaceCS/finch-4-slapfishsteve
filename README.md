@@ -1,6 +1,6 @@
 # Finch Sensor
 
-You will be experimenting with using the Finch's sensor to make it respond to its environment.  
+You will be experimenting with using the Finch's sensors to make it respond to its environment.  
 
 ### Understanding Finch Sensors
 The Finch has multiple sensors it can use to detect its environment.  The ones we will be using are its light sensor and its obstacles sensor.  However, it also has a temperature sensor and a 3-axis accelerometer.  
