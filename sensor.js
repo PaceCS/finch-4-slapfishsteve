@@ -39,16 +39,16 @@ wait(1000);
 
 // Have the Finch flash red and blue for 3 seconds if it detects an obstacle.  Have it disarm itself completely if it detects an strong light.
 while (finch.getLightSensors().right < 100 && finch.getLightSensors().left < 100) {
-    if(finch.getObstacleSensors().right || finch.getObstacleSensors().left) {
-        for (let i = 0; i < 3; i += 1) {
-            finch.setLED();
-            wait(500);
-            finch.setLED();
-            wait(500);
-        }
-        finch.setLED(0, 0, 0);
+    while(!finch.getObstacleSensors().right && !finch.getObstacleSensors().left) {
+        wait(100);
     }
-    wait(3000);
+    for (let i = 0; i < 3; i += 1) {
+        finch.setLED(255, 0, 0);
+        wait(500);
+        finch.setLED(0, 0, 255);
+        wait(500);
+    }
+    finch.setLED(0, 0, 0);
 }
 wait(2000);
 

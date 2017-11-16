@@ -35,22 +35,23 @@ wait(1000);
 // Have the Finch change the color of its nose back and forth every second until it detects a strong light
 
 
-// Have the Finch do the sound and light show that you programmed previously.  It should pause for a second if it detects a strong light and it should stop completely if it detects an obstacle
-
-
 // Have the Finch flash red and blue for 3 seconds if it detects an obstacle.  Have it disarm itself completely if it detects an strong light.
 while (finch.getLightSensors().right < 100 && finch.getLightSensors().left < 100) {
-    if (finch.getObstacleSensors().right || finch.getObstacleSensors().left) {
-        for (var i = 0; i < 3; i += 1) {
-            finch.setLED(255, 0, 0);
-            wait(500);
-            finch.setLED(0, 0, 255);
-            wait(500);
-        }
-        finch.setLED(0, 0, 0);
+    while (!finch.getObstacleSensors().right && !finch.getObstacleSensors().left) {
+        wait(100);
     }
-    wait(3000);
+    for (var i = 0; i < 3; i += 1) {
+        finch.setLED(255, 0, 0);
+        wait(500);
+        finch.setLED(0, 0, 255);
+        wait(500);
+    }
+    finch.setLED(0, 0, 0);
 }
+wait(2000);
+
+// Have the Finch do the sound and light show that you programmed previously.  It should pause for a second if it detects a strong light and it should stop completely if it detects an obstacle
+
 
 // Have the Finch do the maze that you programmed earlier but have it pause if it detects an obstacle and stop completely if it detects a strong light
 
